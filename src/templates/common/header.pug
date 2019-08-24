@@ -1,0 +1,38 @@
+header.header
+    .container.container_home
+        .header__logo
+            a(href="index.html" class="logo__link")
+                span.logo__link--use USE
+                span.logo__link--hyphen -
+                span.logo__link--web WEB
+        nav.menu__header
+            ul.menu__list
+                li.menu__item 
+                    a(href="#" class="menu__link menu-click") Полезные сервисы
+                        span.menu__link-count 3
+                    
+                    ul.sub-menu__list
+                        li.sub-menu__item
+                            a(href="genpass.php").sub-menu__link Пройти тест
+                        li.sub-menu__item
+                            a(href="genpass.php").sub-menu__link Генератор паролей
+                        li.sub-menu__item
+                            a(href="genpass.php").sub-menu__link Генератор промокодов
+            
+                li.menu__item 
+                    a(href="topics.html" class="menu__link") Темы блога
+                li.menu__item
+                    a(href="contacts.html" class="menu__link") Контакты
+                //- li.menu__item
+                //-     a(href="#"  class="menu__link authPopup") Вход
+                //- li.menu__item
+                //-     a(href="registration.html" target="_blank" class="menu__link") Регистрация
+            .block__auth
+                .auth__pic
+                    svg(width="30" height="30").auth__pic--svg
+                        use(xlink:href="assets/sprite/sprite.svg#ninja-portrait")
+                .auth__name Евгений
+
+        .menu__mobile
+            a(href="#").menu__mobile--link Меню
+        include ../common/list-account.pug

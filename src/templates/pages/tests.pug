@@ -1,0 +1,40 @@
+extends ../template
+
+block variables
+    - var title = 'Тестирование знаний'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_topics--page.section_block__test
+        .container
+            include ../common/page-navigation.pug
+        .block__h2__title.block__h2__title--testspages
+            svg(width="45" height="45").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#online-graduation")
+            h2.h2__title Тестирование знаний
+        .container.container__block__test
+            .block__test--info 
+                .shrt__text На данной страницы Вы сможете выбрать любой из 
+                            |предложенных тестов для проверки знаний
+            .block__test
+                ul.block__test__list
+                    - for(var i = 0; i < 3; i++) {
+                        li.block__test__items
+                            .block__test--left
+                                span.block__test--left--title JavaScript
+                                span.block__test--left--text Тест преднозначен для новичков и среднего уровня
+                            .block__test--right
+                                a(href="tests/test-practice.html").block__test--link Пройти тест
+                    -}
+            .block__test--info 
+                .shrt__text Эти тесты помогут оценить уровень знаний, выявить проблемы по темам, 
+                            |которые стоит восполнить для более глубокого понимания вопроса
+
+                
+            
+                            
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

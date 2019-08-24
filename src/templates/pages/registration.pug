@@ -1,0 +1,37 @@
+extends ../template
+
+block variables
+    - var title = 'Регистрация'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_topics--page.section_contacts
+        .container.container__navigation
+            include ../common/page-navigation.pug
+        .block__h2__title
+            svg(width="40" height="40").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#facebook-like-hand-symbol-outline")
+            h2.h2__title.margin-left Регистрация
+        .container.container__contacts  
+            .block__form
+                form.form__registration
+                    .wrapper__input--name
+                        input(type="text" placeholder="Имя" name="registration__input--name").registration__input--name
+                    .wrapper__input--lastname
+                        input(type="text" placeholder="Фамилия" name="registration__input--lastname").registration__input--lastname                  
+                    .wrapper__input--email
+                        input(type="email" placeholder="Email" name="registration__input--email").registration__input--email                      
+                    .wrapper__input--login
+                        input(placeholder="Логин" type="text" name="registration__input--login").registration__input--login
+                    .wrapper__input--pass
+                        input(placeholder="Пароль" type="password" name="registration__input--pass").registration__input--pass
+                    .wrapper__input--repeat--pass
+                        input(placeholder="Повторите пароль" type="password" name="registration__input--repeat--pass").registration__input--repeat--pass
+                    .registration__recaptcha.g-recaptcha(data-sitekey="6LdIJnQUAAAAAGC0J10AXMldoXacdCfod3DpHdSY")
+                    .block__massage
+                    input(type="submit" value="Регистрация").send__registration
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug                

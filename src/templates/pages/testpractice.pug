@@ -1,0 +1,188 @@
+extends ../template
+
+block variables
+    - var title = 'Практика - тестирование знаний'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_topics--page.section_block__test
+        .container
+            include ../common/page-navigation.pug
+        .block__h2__title.block__h2__title--testspages
+            svg(width="45" height="45").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#online-graduation")
+            h2.h2__title Тест по JavaScript
+        .container.container__block__test
+            .block__buttons
+                button(class="button__reset") Начать заново
+                a(href="testpractice.html" class="link__hometests") Выбрать другой тест
+            .navigation__question
+                ul.navigation__question--list
+                .navigation__question--text Вопрос 
+                    span.navigation__question--current 1   
+                    | из 
+                    span.navigation__question--total 15
+            .container__message--error 
+            form.form__test              
+                ul.form__test--list
+       
+                    -
+                        var arr = [
+                           {
+                                lavel: 'Имя первой собаки Имя первой собаки',
+                                answers: [
+                                    ['Шархан', 'false', 'level1', 'answer1'],
+                                    ['Алиса', 'true', 'level1', 'answer2'],
+                                    ['Изабелла', 'false', 'level1', 'answer3']   
+                                ]       
+                           },
+                           {
+                                lavel: 'Имя второй  собаки',
+                                answers: [
+                                    ['Шархан', 'true', 'level2', 'answer4'],
+                                    ['Алиса', 'false', 'level2', 'answer5'],
+                                    ['Изабелла', 'false', 'level2', 'answer6'],
+                                    ['Надя', 'false', 'level2', 'answer7']     
+                                ] 
+                           },
+                           {
+                                lavel: 'Имя третьей  собаки',
+                                 answers: [
+                                    ['Шархан', 'false', 'level3', 'answer8'],                                   
+                                    ['Изабелла', 'true', 'level3', 'answer9'],
+                                    ['Надя', 'false', 'level3', 'answer10']       
+                                 ]
+                           },
+                           {
+                                lavel: 'Имя моей девочки',
+                                answers: [
+                                    ['Рита', 'true', 'level4', 'answer11'],
+                                    ['Надя', 'false', 'level4', 'answer12']
+                                ] 
+                           },
+                           {
+                                lavel: 'Фамилия моей девочки',
+                                answers: [
+                                    ['Дорохова', 'true', 'level5', 'answer13'],
+                                    ['Сидорова', 'false', 'level5', 'answer14'],
+                                    ['Петрова', 'false', 'level5', 'answer15']
+                                ] 
+                           },
+                           {
+                                lavel: 'Имя первой собак',
+                                answers: [
+                                    ['Шархан', 'false', 'level6', 'answer16'],
+                                    ['Алиса', 'true', 'level6', 'answer17'],
+                                    ['Изабелла', 'false', 'level6', 'answer18']   
+                                ]       
+                           },
+                           {
+                                lavel: 'Имя второй  собаки',
+                                answers: [
+                                    ['Шархан', 'true', 'level7', 'answer19'],
+                                    ['Алиса', 'false', 'level7', 'answer20'],
+                                    ['Изабелла', 'false', 'level7', 'answer21'],
+                                    ['Надя', 'false', 'level7', 'answer22']     
+                                ] 
+                           },
+                           {
+                                lavel: 'Имя третьей  собаки',
+                                 answers: [
+                                    ['Шархан', 'false', 'level8', 'answer23'],                                   
+                                    ['Изабелла', 'true', 'level8', 'answer24'],
+                                    ['Надя', 'false', 'level8', 'answer25']       
+                                 ]
+                           },
+                           {
+                                lavel: 'Имя моей девочки',
+                                answers: [
+                                    ['Рита', 'true', 'level9', 'answer26'],
+                                    ['Надя', 'false', 'level9', 'answer27']
+                                ] 
+                           },
+                           {
+                                lavel: 'Фамилия моей девочки',
+                                answers: [
+                                    ['Дорохова', 'true', 'level10', 'answer28'],
+                                    ['Сидорова', 'false', 'level10', 'answer29'],
+                                    ['Петрова', 'false', 'level10', 'answer30']
+                                ] 
+                           },
+                           {
+                                lavel: 'Имя самой первой собаки',
+                                answers: [
+                                    ['Шархан', 'false', 'level11', 'answer31'],
+                                    ['Алиса', 'true', 'level11', 'answer32'],
+                                    ['Изабелла', 'false', 'level11', 'answer33']   
+                                ]       
+                           },
+                           {
+                                lavel: 'Имя второй  собаки',
+                                answers: [
+                                    ['Шархан', 'true', 'level12', 'answer34'],
+                                    ['Алиса', 'false', 'level12', 'answer35'],
+                                    ['Изабелла', 'false', 'level12', 'answer36'],
+                                    ['Надя', 'false', 'level12', 'answer37']     
+                                ] 
+                           },
+                           {
+                                lavel: 'Имя третьей  собаки',
+                                 answers: [
+                                    ['Шархан', 'false', 'level13', 'answer38'],                                   
+                                    ['Изабелла', 'true', 'level13', 'answer39'],
+                                    ['Надя', 'false', 'level13', 'answer40']       
+                                 ]
+                           },
+                           {
+                                lavel: 'Имя моей девочки',
+                                answers: [
+                                    ['Рита', 'true', 'level14', 'answer41'],
+                                    ['Надя', 'false', 'level14', 'answer42']
+                                ] 
+                           },
+                           {
+                                lavel: 'Фамилия моей девочки',
+                                answers: [
+                                    ['Дорохова', 'true', 'level15', 'answer43'],
+                                    ['Сидорова', 'false', 'level15', 'answer44'],
+                                    ['Петрова', 'false', 'level15', 'answer45']
+                                ] 
+                           }
+                           
+                        ]
+                    for items, i in arr
+                        if items.lavel == 'Имя первой собаки Имя первой собаки'
+                            li.form__test--item.showing
+                                .form__test__title= items.lavel
+                                each val in items.answers
+                                    label.form__test--label
+                                        input(type="radio" name=`${val[2]}` data-combine=`${val[2]}` data-boolean =`${val[1]}` value=`${val[3]}`).form__test--input
+                                        .form__test--label--text= val[0]
+                                .wrapper__button
+                                    //- input(type="submit" id="lavel"+i value="Ответить" data-combine=`${val[2]}` data-handlers="html-json.php" class="form__test--button")           
+                        else
+                            li.form__test--item
+                                .form__test__title= items.lavel
+                                each val in items.answers
+                                    label.form__test--label
+                                        input(type="radio"  name=`${val[2]}`  data-boolean =`${val[1]}` value=`${val[3]}`).form__test--input
+                                        .form__test--label--text= val[0]
+                                .wrapper__button
+                                    input(type="submit" id="lavel"+i value="Ответить" data-handlers="html-json.php"  class="form__test--button")
+                                    
+            .block__result
+                .result__shrt--text Результаты ответов                 
+                ul.result__list
+                    //- li.result__item.result__item--false
+                    //-     .result__title Имя первой собаки
+                    //-     .wrapper__result
+                    //-         .answer.answer--true Алиса
+                    //-         .answer Алиса
+                    //-         .answer.answer--false Алиса
+                            
+                            
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

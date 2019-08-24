@@ -1,0 +1,37 @@
+extends ../template
+
+block variables
+    - var title = 'Темы блога'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_topics--page.section_contacts
+        .container.container__navigation
+            include ../common/page-navigation.pug
+        .block__h2__title
+            svg(width="45" height="45").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#gmail")
+            h2.h2__title.margin-left Обратная связь
+        .container.container__contacts
+            .block__form
+                form.form__feedback
+                    .wrapper__input--name
+                        input(type="text" placeholder="Имя" name="feedback__input--name").feedback__input--name
+                    
+                    .wrapper__input--email
+                        input(type="email" placeholder="Email" name="feedback__input--email").feedback__input--email
+                       
+                    .wrapper__input--text
+                        textarea(placeholder="Текст сообщения" name="feedback__input--text").feedback__input--text
+                       
+                    //- .error__recaptcha
+                    //- .true__massage
+                    .feedback__recaptcha
+                    .block__massage
+                    input(type="submit" value="Отправить").send__feedback
+            
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

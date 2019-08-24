@@ -1,0 +1,40 @@
+@import "config/variables.scss";
+@import "config/mixins.scss";
+
+@import "layout/font.scss";
+@import "layout/base.scss";
+@import "layout/adjastment.scss";
+@import "layout/old_news.scss";
+
+@import "fancybox/core.scss";
+@import "fancybox/fullscreen.scss";
+@import "fancybox/share.scss";
+@import "fancybox/slideshow.scss";
+@import "fancybox/thumbs.scss";
+
+@import "index.scss";
+@import "topics.scss";
+@import "contacts.scss";
+@import "news.scss";
+@import "title_news.scss";
+@import "profile.scss";
+@import "tests.scss";
+@import "testpractice.scss";
+@import "genpass.scss";
+
+@import "section/about.scss";
+@import "section/topics.scss";
+@import "section/tests.scss";
+
+@import "common/header.scss";
+@import "common/footer.scss";
+@import "common/menu-mobile.scss";
+@import "common/list-account.scss";
+@import "common/page-navigation.scss";
+@import "common/tabs.scss";
+@import "common/comments.scss";
+@import "common/result-form.scss";
+@import "common/registration.scss";
+@import "common/auth.scss";
+@import "common/scrollAnimate.scss";
+@import "common/sub-top-menu.scss";

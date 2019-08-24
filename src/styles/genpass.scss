@@ -1,0 +1,202 @@
+.genpass {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 70px;
+}
+.genpass__item-input-pass {
+    display: flex;
+    @include laptop {
+        // display: block;
+        align-items: center;
+        flex-direction: column;
+        
+    } 
+}
+.genpass__item-pass {
+    width: 350px;
+    height: 50px;
+    border-top-left-radius: 7px;
+    border-bottom-left-radius: 7px;
+    border: 2px solid #4A89DC;
+    padding-left: 16px;
+    background-color: #F5F7FA;
+    display: flex;
+    align-items: center;
+    outline: none;
+    font-family: 'Roboto';
+    font-size: 20px;
+    color: #656D78;
+    @include laptop {
+        border-top-right-radius: 7px;
+        border-bottom-right-radius: 7px;
+    } 
+    @include phones {
+        width: 95%;
+    }
+}
+.genpass__item-wr {
+    display: flex;  
+    @include laptop {
+        margin-top: 16px;
+        justify-content: center;
+    } 
+}
+.genpass__item-btn {
+    display: flex;
+    align-items: center;
+    height: 50px;
+    padding: 0 10px;
+    font-family: 'Roboto';
+    font-size: 16px;
+    color: #F5F7FA;
+    background-color: #4A89DC;
+    cursor: pointer;
+    transition: background ease-in-out 0.3s;
+    &:hover {
+        background-color: lighten(#4A89DC, 3%);
+    }
+    @include laptop {
+        border-top-left-radius: 7px;
+        border-bottom-left-radius: 7px;
+    } 
+    
+    
+}
+.genpass__item-copy {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 60px;
+    background-color:#37BC9B;
+    border-top-right-radius: 7px;
+    border-bottom-right-radius: 7px;
+    cursor: pointer;
+    transition: background ease-in-out 0.3s;
+    &:hover {
+        background-color: lighten(#37BC9B, 5%);
+    }
+    
+}
+.genpass__item--svg {
+    width: 30px;
+    height: 30px;
+    fill: #F5F7FA;
+}
+.genpass__item-control {
+    margin-top: 16px;
+    @include laptop {
+        display: flex;
+        justify-content: center;
+    }
+}
+.genpass__item-control-wrap {
+    display: inline-flex;
+    border: 2px solid #4A89DC;
+    border-radius: 7px;
+    margin-left: 93px;
+    @include laptop {
+        margin-left: 0;
+
+    }
+}
+.genpass__item-expression {
+    width: 45px;
+    height: 45px;
+    background-color: #F5F7FA;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.genpass__item-control-svg {
+    fill:  #4A89DC;
+    width: 25px;
+    height: 25px;
+}
+.genpass__item-num {
+    width: 45px;
+    height: 45px;
+    outline: none;
+    border: none;
+    background-color: #F5F7FA;
+    border-left: 2px solid #4A89DC;
+    border-right: 2px solid #4A89DC;
+    font-family: 'robotobold';
+    font-size: 25px;
+    color: #656D78;
+    text-align: center;  
+}
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+input[type='number'] {
+    -moz-appearance: textfield;
+}
+
+
+.genpass__item-chk-wr {
+    margin-top: 16px;
+    display: inline-flex;
+    flex-direction: column;
+}
+.genpass__item-label {
+    margin-top: 16px;
+    cursor: pointer;
+    
+}
+.genpass__item-span {
+    font-family: 'Roboto';
+    font-size: 18px;
+    color: #434A54;
+    margin-left: 8px;
+}
+/* Скрываем реальный чекбокс */
+.genpass__item-inp {
+	display: none;
+}
+
+/* Задаем внешний вид для нашего кастомного чекбокса. Все обязательные свойства прокомментированы, остальные же свойства меняйте по вашему усмотрению */
+.checkbox-custom {
+	position: relative;      /* Обязательно задаем, чтобы мы могли абсолютным образом позиционировать псевдоэлемент внютри нашего кастомного чекбокса */
+	width: 30px;             /* Обязательно задаем ширину */
+	height: 30px;            /* Обязательно задаем высоту */
+	border: 2px solid #4A89DC;
+	border-radius: 3px;
+}
+/* Кастомный чекбокс и лейбл центрируем по вертикали. Если вам это не требуется, то вы можете убрать свойство vertical-align: middle из данного правила, но свойство display: inline-block обязательно должно быть */
+.checkbox-custom,
+.label {
+	display: inline-block;
+	vertical-align: middle;
+}
+/* Если реальный чекбокс у нас отмечен, то тогда добавляем данный признак и к нашему кастомному чекбоксу  */
+.checkbox:checked + .checkbox-custom::before {
+	content: "";             /* Добавляем наш псевдоэлемент */
+	display: block;			 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	background: #4A89DC;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	border-radius: 2px;
+}
+.checked {
+    & + .checkbox-custom::before {
+	content: "";             /* Добавляем наш псевдоэлемент */
+	display: block;			 /* Делаем его блочным элементом */
+	position: absolute;      /* Позиционируем его абсолютным образом */
+	/* Задаем расстояние от верхней, правой, нижней и левой границы */
+	top: 4px;
+	right: 4px;
+	bottom: 4px;
+	left: 4px;
+	background: #4A89DC;     /* Добавляем фон. Если требуется, можете поставить сюда картинку в виде "галочки", которая будет символизировать, что чекбокс отмечен */
+	border-radius: 2px;
+}
+}

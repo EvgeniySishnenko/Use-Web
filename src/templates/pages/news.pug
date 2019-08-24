@@ -1,0 +1,677 @@
+extends ../template
+
+block variables
+    - var title = 'Новости'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_news--page
+        .container.container__navigation.container__navigation--news
+            include ../common/page-navigation.pug
+            .block__button--category
+                .button--category Разделы
+        .wrapper__news
+            .block__left
+                aside.aside
+                    .aside__section--title Разделы
+                    ul.aside__list
+                        - for(var i = 0; i < 7; i++){
+                            li.aside__item 
+                                a(href="title_news.html").aside__link Технологии, инструменты,  сервисы
+                        -}
+                        
+            .block__right
+                main.main
+                    article.article
+                        h1.h1title.animatable.fadeInDown CodeLobster
+                        p.animatable.fadeInDown
+                            span.span_bold_black CodeLobster 
+                            | - быстрая и удобная WEB IDE для PHP, HTML, CSS и JavaScript.
+                        p.animatable.fadeInDown Часто среда разработки отнимает много системных ресурсов и работает медленно даже на современных компьютерах.
+                        p.animatable.fadeInDown Должен ли программист выбрасывать свой любимый ноутбук или вкладываться в покупку SSD-дисков, нового процессора и расширение RAM? Или есть другое решение?
+                        
+                        p.animatable.fadeInDown В этой статье хотелось бы поговорить об эффективности, о скорости работы и о максимальной продуктивности разработчика, которой можно достичь с 
+                            a(class="class_link" target="_blank" rel="nofollow" href="http://www.codelobsteride.com/") CodeLobster PHP IDE
+                            |.
+                        p.animatable.fadeInDown CodeLobster - это отличный пример активно развивающегося и растущего проекта, при этом добавление новой функциональности не приводит к расходованию системных ресурсов и дискового пространства.
+                        p.animatable.fadeInDown Это компилированная программа, он написан и разрабатывается на С++. Применение языка низкого уровня обеспечивает высокую скорость работы редактора и отзывчивый интерфейс.
+                        p.animatable.fadeInDown Приложение быстро стартует, имеет дистрибутив маленького размера и занимает немного места на диске при инсталляции. Так что можно с уверенностью сказать, что это самая быстрая кроссплатформенная IDE для WEB-разработки из всех представленных в данный момент на рынке программного обеспечения.
+                        p.animatable.fadeInDown.headline-news Основные возможности по работе с кодом
+                        p.animatable.fadeInDown CodeLobster выполняет улучшенную дифференцированную подсветку PHP, HTML, CSS и JavaScript кода, добавляет закрывающие HTML-теги и следит за парными кавычками и скобками.
+                        p.animatable.fadeInDown Проверка файлов на наличие синтаксических ошибок идёт в фоновом режиме, строки с ошибками будут сразу подсвечены и мы можем мгновенно выявить и исправить любое некорректное выражение.
+                        p.animatable.fadeInDown Часто приходится очень спешить, набирая код, чтобы не упустить хорошую идею или как можно быстрее реализовать нужный алгоритм.
+                        p.animatable.fadeInDown Начните вводить имя PHP или JavaScript функции и жмите клавиши 
+                            span.span_bold_black Ctrl + Space
+                            |, в результате вы получаете выпадающий список с возможными вариантами в данном контексте.
+                        .art-box__wr-img
+                            a.art-fancybox-link.group(href="assets/images/news/codeLobster.png")
+                                img.img-news.img-shadow(src="assets/images/news/codeLobster.png")
+                                .wrap-zoom
+                                    svg(width="80" height="80")
+                                        use(xlink:href="assets/sprite/sprite.svg#search")
+                        p.animatable.fadeInDown Достаточно просто выбрать нужный пункт из списка. Подобная функциональность предусмотрена и для параметров функций, HTML-атрибутов, тегов и CSS-свойств.
+                        p.animatable.fadeInDown Редактирование исходных файлов большого размера может повлиять на скорость вашей работы, особенно, если при этом приходится ещё и читать чужой код.
+                        p.animatable.fadeInDown Редактор в CodeLobster позволяет сворачивать блоки кода, устраняя необходимость долгой прокрутки. А для быстрой навигации по файлу используйте локальные закладки. Эта полезная функция позволит вам мгновенно перемещаться по всем файлам проекта.
+                        p.animatable.fadeInDown Чтобы перейти к объявлению функции или к определению класса, кликните мышкой по названию, удерживая нажатой клавишу 
+                            span.span_bold_black Ctrl
+                            |, так же можно быстро открыть любой подключаемый файл.
+                        p.animatable.fadeInDown Если код получился не аккуратным, можно легко выровнять все отступы и подправить расположение скобок в автоматическом режиме. Воспользуйтесь функцией форматирования кода - просто жмите клавиши 
+                            span.span_bold_black Ctrl + Alt + F
+                            |.
+                        p.animatable.fadeInDown В программе присутствует собственная коллекция сниппетов, это намного ускоряет работу с циклами, проверками условий и перехватом исключений.
+                        p.animatable.fadeInDown При необходимости вы можете добавить собственные сниппеты для наиболее часто повторяющихся выражений.
+                        p.animatable.fadeInDown.headline-news Продвинутая справочная система
+                        p.animatable.fadeInDown На правой панели программы есть специальная вкладка - "Dynamic Help". Здесь IDE отображает динамически подобранные ссылки на официальную документацию по тем WEB-технологиям, с которыми вы работаете в данный момент.
+                        p.animatable.fadeInDown При клике по ссылке документация открывается в браузере. Также справку можно получить, просто нажав клавишу F1, когда курсор в редакторе находится на интересующем вас элементе.
+                        .art-box__wr-img
+                            a.art-fancybox-link.group(href="assets/images/news/codeLobster_1.png")
+                                img.img-news.img-shadow(src="assets/images/news/codeLobster_1.png")
+                                .wrap-zoom
+                                    svg(width="80" height="80")
+                                        use(xlink:href="assets/sprite/sprite.svg#search")
+                        
+                        p.animatable.fadeInDown.headline-news Пользовательский интерфейс
+                        p.animatable.fadeInDown Каждому программисту хочется, чтобы его IDE выглядела стильно и привлекательно. CodeLobster поставляется с набором современных тем оформления, среди них темы Eclipse, NetBeans, 
+                            a(class="class_link" href="news.php?id=139&tid=3") VSCode 
+                            | и из редакторов Atom, Brackets, 
+                            a(class="class_link" href="news.php?id=27&tid=3") Sublime
+                            |.
+                        p.animatable.fadeInDown Можно выбрать понравившуюся тему в главном меню, это пункт 
+                            span.span_bold_black "View" -> "Visual Style"
+                            |.
+                        p.animatable.fadeInDown Для подсветки в редакторе существует более 20 отдельных цветовых схем. Даже самый требовательный пользователь подберёт себе схему, максимально комфортную для зрения.
+                        p.animatable.fadeInDown Есть несколько хороших тёмных цветовых схем с умеренной контрастностью, можете выбрать одну из них, если вам приходится кодить в тёмное время суток - так ваши глаза будут меньше уставать.
+                        .art-box__wr-img
+                            a.art-fancybox-link.group(href="assets/images/news/codeLobster_2.png")
+                                img.img-news.img-shadow(src="assets/images/news/codeLobster_2.png")
+                                .wrap-zoom
+                                    svg(width="80" height="80")
+                                        use(xlink:href="assets/sprite/sprite.svg#search")
+                        p.animatable.fadeInDown Интерфейс программы переведён на множество языков, можно использовать все европейские языки: английский, французский, немецкий, испанский, русский и другие. Вы сможете без проблем выбрать в настройках и включить использование своего родного языка.
+                        p.animatable.fadeInDown Программа работает на Mac OS и на современных Windows системах: Windows 7, 8 и 10. Те, кто предпочитает Linux, могут установить её под Ubuntu, Fedora или Debian.
+                        p.animatable.fadeInDown Описанные возможности предоставляются в бесплатной версии, этого вполне достаточно для комфортной работы в своё удовольствие и для создания чистого кода без ошибок.
+                        p.animatable.fadeInDown В то же время, лицензия стоит совсем не дорого, приобрести её может как профессионал, так и молодой WEB-разработчик, который только начинает осваивать азы этой интересной профессии.
+                        p.animatable.fadeInDown Использование бесплатной IDE ничем вас не ограничивает, а профессиональная версия значительно дополняет и расширяет всю базовую функциональность, делая работу программиста ещё продуктивней.
+                        p.animatable.fadeInDown.span.span_bold_black Далее рассмотрим возможности профессиональной IDE.
+                        p.animatable.fadeInDown.headline-news FTP клиент и SQL менеджер
+                        p.animatable.fadeInDown Множество готовых сайтов подвергаются переделке и обновлению, следовательно, разработка непосредственно на удалённом сервере - это необходимое и ответственное задание для каждого программиста. 
+                        p.animatable.fadeInDown Встроенный в CodeLobster FTP клиент обеспечивает прозрачную работу с исходными файлами на хостинге, можно настроить автосинхронизацию файлов проекта и выгрузку отредактированного документа при сохранении.
+                        p.animatable.fadeInDown Для безопасного подключения есть возможность использовать защищённый FTPS протокол, а также SSH-доступ (SFTP).
+                        p.animatable.fadeInDown Взаимодействие с MySQL базами данных производится с помощью удобного SQL менеджера. Любой запрос к базе может быть сохранён в файле с расширением ".sql", а затем повторно использоваться или модифицироваться.
+                        p.animatable.fadeInDown В том случае, когда запрос возвращает результаты, их можно просматривать в удобном табличном представлении.
+                        .art-box__wr-img
+                            a.art-fancybox-link.group(href="assets/images/news/codeLobster_3.png")
+                                img.img-news.img-shadow(src="assets/images/news/codeLobster_3.png")
+                                .wrap-zoom
+                                    svg(width="80" height="80")
+                                        use(xlink:href="assets/sprite/sprite.svg#search")
+                        p.animatable.fadeInDown При разработке баз данных для своего приложения вы сможете проявить все свои таланты в составлении SQL запросов. Продвинутый SQL-редактор с подсветкой синтаксиса и автозавершением значительно упростит эти задачи.
+                        p.animatable.fadeInDown.headline-news Работа с Git
+                        p.animatable.fadeInDown Как известно, команда решает всё. 
+                            a(class="class_link" href="news.php?id=138&tid=3") Система контроля версий Git 
+                            | помогает команде разработчиков вести совместную параллельную работу и гибко управлять проектом.
+                        p.animatable.fadeInDown Программисты могут создавать ветки и коммиты, отслеживать индивидуальные изменения и избежать несовместимости в исходном коде.
+                        p.animatable.fadeInDown CodeLobster предлагает нам удобный графический интерфейс для просмотра истории правок и сравнения различных версий файлов.
+                        p.animatable.fadeInDown Вы сможете легко взаимодействовать с локальными и удалёнными репозиториями, например, размещёнными на популярных сайтах GitHub или BitBucket.
+                        p.animatable.fadeInDown Применение VCS в работе позволит быстро и безопасно добавлять и тестировать новые функции, а так же защитить и сохранить самое ценное для компании - целостность исходных кодов.
+                        p.animatable.fadeInDown.headline-news Работа с фреймворками и CMS
+                        p.animatable.fadeInDown Ничто так не способствует быстрому развёртыванию новых проектов, как применение фреймворков. Крупные компании при приёме на работу всегда отдают предпочтение программисту, хорошо знакомому с такими инструментами. 
+                        p.animatable.fadeInDown В CodeLobster IDE есть отдельный плагин под каждую популярную PHP библиотеку - CakePHP, CodeIgniter, Laravel, Phalcon, Symfony, Yii и для шаблонизаторов Smarty и Twig.
+                        p.animatable.fadeInDown MVC и ORM фреймворки помогают разделить управление данными и отображение, а так же обеспечивают удобные способы программного доступа к MySQL. 
+
+                        p.animatable.fadeInDown  Можно сэкономить время на тестировании, не изобретать заново все рутинные функции, а просто использовать предоставляемые библиотеками API.
+                        p.animatable.fadeInDown  Например, чтобы начать использовать Laravel в нашей IDE, не потребуется командная строка или установка виртуальной машины Homestead.
+                        .art-box__wr-img
+                            a.art-fancybox-link.group(href="assets/images/news/codeLobster_4.png")
+                                img.img-news.img-shadow(src="assets/images/news/codeLobster_4.png")
+                                .wrap-zoom
+                                    svg(width="80" height="80")
+                                        use(xlink:href="assets/sprite/sprite.svg#search")
+                        p.animatable.fadeInDown Мы просто создаём новый проект и производим элементарную настройку подключения к базе данных. После чего начинаем программировать используя автокомплит по функциям и доступ к справочной документации по Laravel с помощью динамической помощи. 
+                        p.animatable.fadeInDown.headline-news Поддерживаемые CMS
+                        p.animatable.fadeInDown CMS - это тоже фреймворки с собственным расширенным API и возможностью управлять структурой сайта через панель администратора.
+                        p.animatable.fadeInDown.span_bold_black На данный момент поддерживаются следующие системы:
+                        ul.art__news-list   
+                            li.art__news-item.animatable.fadeInDown
+                                .art__news-wrap
+                                    span.art__news-num &#10004;
+                                    span
+                                        span.span_bold_black  Drupal 
+                                        |- его обычно используют при разработке больших корпоративных сайтов и WEB-приложений;
+                            li.art__news-item.animatable.fadeInDown
+                                .art__news-wrap
+                                    span.art__news-num &#10004;
+                                    span
+                                        span.span_bold_black Magento  
+                                        |- специально предназначена для построения интернет магазинов и сайтов электронной коммерции;
+                            li.art__news-item.animatable.fadeInDown
+                                .art__news-wrap
+                                    span.art__news-num &#10004;
+                                    span
+                                        span.span_bold_black Joomla   
+                                        |- простая в освоении и легковесная CMS, это гибкая система с большим сообществом программистов;
+                            li.art__news-item.animatable.fadeInDown
+                                .art__news-wrap
+                                    span.art__news-num &#10004;
+                                    span
+                                        span.span_bold_black WordPress    
+                                        |- движок для блогов, который превратился в универсальную платформу для создания интернет сайтов любой сложности.        
+                        p.animatable.fadeInDown Создатели CodeLobster IDE особое внимание уделили фронтэнд разработке, зная о том, что качественный дизайн и удобный пользовательский интерфейс обеспечивают успех любого вебсайта.
+                        p.animatable.fadeInDown Поддерживается незаменимая библиотека JQuery, так же в IDE есть автокомплит и подсказки по всем CSS классам популярного Bootstrap фреймворка и по его вспомогательным JavaScript функциям.
+                        p.animatable.fadeInDown Включена широкая поддержка других JavaScript инструментов и реализована она очень хорошо. Среди них AngularJS, BackboneJS, EmberJS, MeteorJS, VueJS и Node.js. Любую библиотеку можно добавить в свой проект, сделав лишь пару кликов.
+                        .art-box__wr-img
+                            a.art-fancybox-link.group(href="assets/images/news/codeLobster_5.png")
+                                img.img-news.img-shadow(src="assets/images/news/codeLobster_5.png")
+                                .wrap-zoom
+                                    svg(width="80" height="80")
+                                        use(xlink:href="assets/sprite/sprite.svg#search")
+                        p.animatable.fadeInDown.headline-news Подведём итог
+                        p.animatable.fadeInDown IDE создаёт условия для решения всех возможных задач непосредственно в программе, при этом не нужно отвлекаться на установку и настройку сторонних утилит.
+                        p.animatable.fadeInDown А время, которое вы экономите, можно потратить на разработку архитектуры своего приложения и реализацию рабочих алгоритмов.
+                        p.animatable.fadeInDown 
+                            a(class="class_link" target="_blank" rel="nofollow" href="http://www.codelobsteride.com/") CodeLobster PHP IDE 
+                            |можно быстро установить, запустить и начать использовать без каких-либо предварительных настроек.
+                        p.animatable.fadeInDown Он изначально создавался программистами для программистов, разработчики и по сей день активно его используют для работы над своими собственными интернет-проектами.
+                        p.animatable.fadeInDown Эта IDE растёт и развивается вместе с WEB-технологиями, которые неизменно совершенствуются с каждым днём. Она позволит вам работать над проектами любой сложности и масштаба и преуспеть в любимом деле.
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        
+                        //- .art-box__wr-img.animatable.fadeInDown
+                            img.img-news.img-shadow(src="assets/images/news/code-583073_640.jpg")
+                        //- p.animatable.fadeInDown Как правило, frontend-разработчик получает от веб-дизайнера определённый список, состоящий из макетов будущего сайта или сервиса, и уже на основе этих макетов приступает к созданию пользовательского интерфейса:
+                        
+                        
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black верстает дизайн, то есть разрабатывает шаблоны страниц будущего сайта при помощи технологий HTML, CSS и JavaScript;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black выполняет настройку работы кнопок, форм, галерей, слайдеров и другого функционала, присутствующего на сайте;      
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black проверяет и тестирует работу;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black даёт советы, как реализовать тот или иной функционал на сайте;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black занимается оптимизацией скриптов с целью ускорения загрузки сайта.
+                        //- p.animatable.fadeInDown Исходя из прямых обязанностей frontend-разработчика, основными инструментами, которыми он свободно должен владеть, являются HTML, CSS и JavaScript. Именно с их помощью специалист сможет разрабатывать все необходимые элементы клиентской части веб-приложений и сайтов, которые станут доступными для прочтения всеми браузерами на ПК и смартфонах.
+                        //- p.animatable.fadeInDown HTML (HyperText Markup Language) представляет из себя язык разметки веб-документов, предназначенный для визуального и смыслового структурирования информации на странице, например, определение параграфов, заголовков, таблиц данных и пр. CSS (Cascading Style Sheets) - язык, отвечающий за визуальное отображение документов пользователям. А отображение документа пользователю, в свою очередь, означает ни что иное, как его преобразование в удобную для восприятия форму (например, придание фону страницы того или иного цвета). JavaScript – язык программирования, который даёт возможность создавать динамически обновляемое информационное содержание сайта, управлять мультимедиа, анимировать изображения и т.п.
+                        //- p.animatable.fadeInDown.headline-news Помимо трёх основных инструментов, frontend-разработчик должен уметь пользоваться и дополнительными. К ним относятся:
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black библиотеки  готовых программ на языке JavaScript (React, Vue, Angular jQuery, D3 и др.);
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black методологии вёрстки (БЭМ, SMACSS, ECSS и др.);
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black инструменты контроля версий (Git, GitHub, CVS и др.);
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black графические редакторы (Photoshop, Illustrator и пр.);
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black фреймворки (Bootstrap, Bulma, Foundation и др.);
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black базы данных и языки запросов (SQL, MySql, NoSQL, MongoDB и др.);    
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black инструменты отладки (Chrome Dev Tools, Firebug и пр.);
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black методы SEO-оптимизации;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black кросс-браузерная и кросс-платформенная разработка;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black системы управления содержимым (CMS) - WordPress, Drupal, Joomla и др.;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black сборщики модулей (Gulp, Grunt, Webpack и др.).
+                        //- p.animatable.fadeInDown Все вышеперечисленные дополнительные инструменты, а также многие другие позволят frontend-разработчику в автоматическом режиме выполнять сложную, но в то же время повторяющуюся работу, и значительно увеличат производительность труда и работоспособность специалиста.
+                        //- p.animatable.fadeInDown Получить первичные знания в области программировании можно во многих государственных и частных высших учебных заведениях страны. Лидерами в области ИТ-подготовки являются:
+                        //- p.animatable.fadeInDown.headline-news Получить первичные знания в области программировании можно во многих государственных и частных высших учебных заведениях страны. Лидерами в области ИТ-подготовки являются:
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Московский государственный университет;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black  Московский государственный технический университет имени Н. Э. Баумана;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Московский физико-технический институт;
+
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Новосибирский государственный университет;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Санкт-Петербургский государственный университет;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Новосибирский государственный технический университет;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Высшая школа экономики;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Национальный исследовательский ядерный университет «МИФИ»;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#9999; 
+                        //-             span.span_bold_black Санкт-Петербургский политехнический университет Петра Великого.
+
+
+
+                        //- p.animatable.fadeInDown.headline-news Углублённые же знания можно получить, пройдя обучение на специализированных курсах. Наибольшим спросом пользуются курсы:
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#10148; 
+                        //-             span.span_bold_black «Разработка интерфейсов» - Обучение от Яндекс, где студенты слушают лекции о frontend-разработке и применяют полученные знания и навыки в работе над решением конкретных задач. Лекции здесь читают разработчики Яндекса, создающие интерфейсы для Поиска, Почты, Карт, Маркета и других сервисов.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#10148; 
+                        //-             span.span_bold_black Интерактивные онлайн-курсы по HTML, CSS и JavaScript от HTML Academy, позволяющие в интерактивной форме с нуля изучить всю необходимую информацию и применить её на практике.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#10148; 
+                        //-             span.span_bold_black Loftschool
+                            
+                        
+                        
+                        //- p.animatable.fadeInDown Когда получены базовые знания и пройдены углублённые курсы, желательно приступить к самосовершенствованию, чтобы не растерять всех полученных навыков и умений. Здесь на помощь придут огромное количество книг по frontend-разработке, среди которых большей популярностью пользуются:
+                        //- ul.art__news-list
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#10148; 
+                        //-             span.span_bold_black «JavaScript: сильные стороны» Дугласа Крокфорда, в которой отмечены наиболее надёжные и удобные JavaScript-конструкции, дающие возможность создавать эффективные коды;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#10148; 
+                        //-             span.span_bold_black «Изучаем HTML, XHTML и CSS» (Элизабет Фримен и Эрик Фримен), в которой авторы уделяют внимание важнейшим моментам в HTML и CSS и разбирают их на конкретных примерах;
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &#10148; 
+                        //-             span.span_bold_black «Новая большая книга CSS» (Макфарланд Д.), представляющая собой достаточно полный сборник возможностей CSS, отлично подходящих как для новичков, так и для тех, кто любит вдаваться во все подробности.  
+                        //- p.animatable.fadeInDown Frontend-разработчик – это очень востребованная, пользующаяся спросом и хорошо оплачиваемая профессия, которая отлично подходит для творческих людей, интересующихся в равной степени программированием и дизайном. В среднем заработная плата frontend-разработчика по России находится в диапазоне от 40 до 180 тысяч рублей и от 60 до 250 тысяч рублей – по Москве. Точные суммы будут зависеть от квалификации самого специалиста, его стажа и уровня оплаты труда в той или иной компании. В случае отсутствия стажа работы и солидного портфолио работодатели обращают внимание на то, какой ВУЗ окончил специалист. Выпускники Московского физико-технического университета (МФТИ) вполне могут рассчитывать на первоначальную заработную плату в размере около 135 тысяч рублей, а претенденту на ту же должность, но уже с дипломом, например, Казанского Федерального университета скорее всего предложат сумму в районе 70–85 тысяч рублей.
+                        //- p.animatable.fadeInDown Профессия frontend-разработчика в настоящее время пользуется огромным спросом, так как напрямую связана с новейшими современными технологиями и постоянным желанием усложнить и разнообразить пользовательский интерфейс, поэтому «топтаться на одном месте» точно не придется, в этом деле необходимо постоянно осваивать новые смежные профессии, чтобы быть конкурентоспособным.   
+                        //- p.animatable.fadeInDown С точки зрения продвижения по карьерной лестнице, вариантов может быть несколько, начиная от рядового frontend-разработчика и заканчивая ведущим специалистом компании (ИТ-директором, программным архитектором, старшим веб-разработчиком или менеджером по проектам).
+
+
+
+
+                        //- p.animatable.fadeInDown Обязательный минимум для специалиста – знание 
+                        //-     a(href="news.php?id=13&tid=2").class_link HTML
+                        //-     |,  
+                        //-     a(href="/news.php?id=12&tid=2").class_link JavaScript
+                        //-     |,  
+                        //-     a(href="/news.php?id=14&tid=2").class_link CSS
+                        //-     |,  
+                        //-     a(href="/news.php?id=138&tid=3").class_link Git 
+                        //-     | (система контроля версий).
+                        //- p.animatable.fadeInDown И так как программы надо писать в редакторах, обязательно нужно изучить основы Notepad++  
+                        //-     a(href="/news.php?id=139&tid=3").class_link VS code
+                        //-     span , 
+                        //-     a(href="/news.php?id=27&tid=3").class_link Sublime text 
+                        //-     | и Adobe Photoshop (графический редактор). Обучение работы с этими программами также есть в YouTube.
+                        
+                        //- p.animatable.fadeInDown.headline-news Какие курсы можно и нужно пройти и как получить работу?
+                        //- p.animatable.fadeInDown Полезные книги для понимания своей профессии и углубление в сам принцип работы:
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black «HTML, CSS, скрипты: практика создания сайтов» Артемий Ломов
+                        //-             p Книга описывает ступеньки карьеры настоящего веб-мастера, практику создания сайтов, рассматривает современные технологии изучения программ, язык сценариев JavaScript. После прочтения этой книги вы сразу же сможете понять основные принципы работы, что нужно изучать в первую очередь, на что нужно действительно обращать внимание и на что можно не тратить много времени. Как получить наилучший результат и создать за пару часов то, над чем работают неделями. Объяснение понятным языком, после которого работа с программами является легким и интересным досугом, вместо кропотливой, тяжелой работы часами, а то и сутками.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black «Pro CSS3 Layout Techniques» Sam Hampton-Smith.
+                        //-             p Книга написана на английском языке. В принципе, чтобы хорошо разбираться в программах, знание языка очень полезно, но не необходимо.
+                        //-             p Можно сказать, что зарубежные книги более полезны, так как в них содержится наибольшее количество полезной информации и не упускается ни малейшей детали. Если сравнить эту книгу с предыдущей, то в данном издании вы сможете понять принцип работы с программами без потери деталь. После прочтения книги, написанной Шотландским автором, вы получите обширные знания в сфере HTML-программирования.
+                        //-             p Вы узнаете с какими трудностями сталкиваются веб-дизайнеры, пытаясь перевести статический макет в полнофункциональный веб-сайт, как использовать новые модули макетов в CSS3, включая многостолбцовые макеты, модуль гибкой компоновки блоков, сеточные макеты CSS и CSS-области. безопасны для использования сегодня, и которые, вероятно, будут безопасны в ближайшем будущем, как ускорить ваш рабочий процесс проектирования с их использованием, как поддерживать старые веб-браузеры. Книга прилагает макеты для успешной работы и помогают сразу разобраться во всех тонкостях профессии.
+                        //- p.animatable.fadeInDown.headline-news Курсы, которые проходят непосредственно в лучших ВУЗах России и по которым можно получить хороший грант или бонус на трудоустройство в крупную компанию:
+                        
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black Центр компьютерного обучения «Специалист» МГТУ им. Баумана.
+                                    
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black Международная Компьютерная академия «ШАГ».
+                        //- p.animatable.fadeInDown.headline-news Удаленное обучение по интернету:
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black Образовательный портал GeekBrains от Mail.ru Group.
+                                    
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black HTML academy интерактивные онлайн-курсы.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.span_bold &bull; 
+                        //-             span.span_bold_black Loftschool.
+                        //- p.animatable.fadeInDown Набор на курсы также можно найти в интернете, узнать стоимость и сроки проведения. В браузере можно вбить курсы по html и найти все доступные на данный момент.
+                        //- p.animatable.fadeInDown Работу можно найти по вакансиям в интернете, либо по размещению объявлений от рекламодателя на трудоустройство. В интернете можно найти вакансии на фриланс и на штатную работу.
+                        //- p.animatable.fadeInDown.span_bold Кем работать?
+                        //- p.animatable.fadeInDown  HTML-верстальщики очень востребованы и нужны во всех предприятиях, особенно широкого масштаба. Специалисты нужны в интернет-магазинах (особенно, так как по сути магазин является страницей в интернете) СМИ, агентствах, большом бизнесе для раскрутки и привлечения большего количества людей в организации. Обычно верстальщики занимаются разработкой сайтов в сети Интернет и работают удаленно (фриланс) и штатно (трудоустраиваются в само предприятие).
+                        //- p.animatable.fadeInDown.span_bold Сколько зарабатывает Html-верстальщик?
+                        //- p.animatable.fadeInDown Средняя зарплата специалиста в РФ составляет от 40.000 до 120.000 рублей. В основном все зависит от ваших знаний, успехов в работе и организации, где вы работаете.         
+                        //- p.animatable.fadeInDown.span_bold Как зарабатывать много?
+                        //- p.animatable.fadeInDown За один заказ в среднем можно получить от 5 тысяч рублей, дальше вопрос вашей продуктивности. Но не забывайте, что есть множество заказчиков, которые ищут неопытных фрилансеров и впихивают свой заказ (повышенной трудности) за копейки, которые на самом деле стоят в 3-4 раза дороже. Будьте внимательны и старайтесь заработать как можно больше.
+                        //- p.animatable.fadeInDown В штатном режиме за отличные результаты – получать бонусы и премии, повышаться.
+
+
+
+
+
+                        //- .art__fancybox-wr
+                        //-     a.art__fancybox__link.group(href="https://www.youtube.com/watch?v=gqoU2z6fu6M&autoplay=0&feature=youtu.be")
+                        //-         img(src="assets/images/fancyImg/adapt.jpg").art__box-image.img-shadow
+                        //-         .wr__icon-play
+                        //-             img(src="assets/images/fancyImg/play.png").icon-play__img
+                        //- .headline-news HTML файл и JavaScript
+                        
+                        //- p.animatable.fadeInDownn  Сейчас уже никого не удивишь собственным интернет-магазином или тематическим сайтом, в котором владелец делится чем-то полезным или интересным со своей аудиторией. Как создать собственный сайт? Для одних это дело пары дней, а другие даже представить себе не могут масштабов работы. Хотите узнать, как создать сайт? Пошаговая инструкция для начинающих представлена ниже.
+                        //- .art-box__wr-img
+                        //-     img.img-news.img-shadow(src="assets/images/news/woman-4109075_640.jpg")
+                        //- .headline-news.animatable.fadeInDownn Подготовка и планирование
+                        //- p.animatable.fadeInDownn Первый этап создания собственного сайта — это определение задач и целей. Вы должны решить, какой контент будет публиковаться на сервисе и на какую целевую аудиторию он рассчитан. Это во многом повлияет на особенности архитектуры сайта: строения его структурных единиц и расположения функциональных блоков. Все сайты классифицируются на множество видов в зависимости от тематики, численности аудитории, способов оформления и структурирования, расположения и уровня доступности. Сервисы могут быть коммерческими, узкоспециализированными, информационными, социальными и даже созданные исключительно в целях продвижения других ресурсов.
+                        //- p.animatable.fadeInDownn.tag__style Львиную долю подготовительного этапа занимает аналитика. Проанализируйте особенности сайтов конкурентов:
+                        //- ul.art__news-list.animatable.fadeInDownn   
+                        //-     li.art__news-item
+                        //-         .art__news-wrap
+                        //-             span.art__news-num &#10004;
+                        //-             span.art__news-text Какие интересные "фишки" они используют?
+                        //-     li.art__news-item
+                        //-         .art__news-wrap
+                        //-             span.art__news-num &#10004;
+                        //-             span.art__news-text В чем заключается неудобство работы с их сервисами?
+                        //-     li.art__news-item
+                        //-         .art__news-wrap
+                        //-             span.art__news-num &#10004;
+                        //-             span.art__news-text Что полезного можно перенять или взять за основу в этих сайтах?
+                        //- p.animatable.fadeInDownn Постарайтесь найти развернутые ответы на эти вопросы. Как известно, дураки учатся на собственном опыте, а умные — на чужом, поэтому не стесняйтесь использовать платформы конкурентов для создания набросков собственного сайта. После того, как вы определитесь с наполнением, отсечете свою потенциальную ЦА и изучите наработки конкурентов можно приступать к проектированию дизайна и созданию макета сайта. Да, и нельзя забывать о названии, которое, как известно, определяет маршрут не только для кораблей.
+                        
+                        //- .headline-news.animatable.fadeInDownn Веб-дизайн: красиво и заманчиво
+                        //- p.animatable.fadeInDownn Дизайн определяет многое. Если задача наполнения — заставить прочитать/заказать/купить/подписаться/зарегистрироваться, то задача дизайна — привлечь интернет пользователя к контенту. Чтобы создать макет, необходимо придумать оптимальный вариант расположения функциональных блоков и разделов сайта, подобрать цвета для оформления и шрифты для текста. Веб-дизайн — это отдельная отрасль веб-разработки, хотя она и считается одной из самых "молодых". Стать веб-дизайнером просто так, без теоретических знаний и практических навыков не получится. Специалисты этой профессии отвечают за три рабочих процесса:
+                        //- ul.art__news-list.animatable.fadeInDownn
+                        //-     li.art__news-item
+                        //-         .art__news-wrap
+                        //-             span.art__news-num &#10004;
+                        //-             span.art__news-text Разработка логической структуры сайта, его "скелет", на который будет нанизываться контент.
+                        //-     li.art__news-item
+                        //-         .art__news-wrap
+                        //-             span.art__news-num &#10004;
+                        //-             span.art__news-text Разработка наиболее удачных способов подачи информации посетителю платформы. Ей, как правило, предшествует детальное изучение потребностей и особенностей целевой аудитории.
+                        //-     li.art__news-item
+                        //-         .art__news-wrap
+                        //-             span.art__news-num &#10004;
+                        //-             span.art__news-text Художественное оформление сервиса.
+                        //- p.animatable.fadeInDownn Сначала необходимо освоить азы работы с программой Photoshop. Есть и ряд других графических редакторов, но самой распространенной и удобной по признаниям многих пользователей все равно остается старый-добрый Photoshop. Начинающему веб-дизайнеру придется изучить основы правильного составления композиции, сочетания цветов, цветокоррекции, технический дизайн и векторную-графику. Естественно, что за один день невозможно стать профи в этой области, поэтому придется долго и упорно тренироваться и набивать руку. Веб-дизайнеры — это специалисты с тонким художественным вкусом, особым мировоззрением и богатым воображением, которое рождает креативные идеи. Они обладают хорошим чутьем и обостренным чувством стиля. С этими качествами не рождаются, их воспитывают в себе.
+                        //- p.animatable.fadeInDownn Чтобы работать было проще, можно набросать чертеж макета сначала на бумаге, а уже после приступить к работе с компьютерным программами. Имея перед глазами эскиз, проще сориентироваться, если вы делаете первые робкие шаги в освоении веб-дизайна.
+                        //- .art-box__wr-img
+                        //-     img.img-news.img-shadow(src="assets/images/news/web-3157323_1280.jpg")
+                        //- h2.h2title.animatable.fadeInDown Как создать сайт: пошаговая инструкция для верстки
+                        //- .art-container.mt-mob.animatable.fadeInDownn
+                        //-     .art-box.float-l.mr-30.content-center-mob
+                        //-         .art-box__wr-img
+                        //-             img.img-shadow(src="assets/images/news/code-1076536_640.jpg")
+                        //-     .art-box.mt-mob
+                        //-         p После того, как у вас уже готов макет сайта, пора преобразить и перевести виртуальные изображения в веб-страницу. Для этого используются HTML и CSS. Верстальщик, как и веб-дизайнер, должен уметь работать с программой Photoshop. Эти навыки помогут нарезать или подкорректировать макет, если на то возникает необходимость.
+                        //-         p Основой веб-разработки можно назвать язык HTML. Если вы хотите создать свой сайт, не имея о нем представления, то это равносильно попытками написать книгу, когда вы не знаете письменность и никогда в глаза не видели алфавит. CSS тоже занимает ключевую позицию среди инструментария верстальщика. Нельзя забывать и о третьем "столпе", на котором зиждется создание сайта, — JavaScript.
+                        //- .clearfix1
+                        //- .headline-news.animatable.fadeInDown Как создать сайт: пошаговая инструкция по работе с HTML
+                        //- .art-container.mt-mob.animatable.fadeInDownn
+                        //-     .art-box.float-r.ml-30.content-center-mob
+                        //-             .art-box__wr-img
+                        //-                 img(src="assets/images/news/code-3600810_640.png")
+                        //-     .art-box.mt-mob
+                        //-         p В роли "слов" в HTML-языке выступают команды или тэги, как их еще называют в среде программистов. Всего их насчитывается около 100, но в работе используются в основном 30-35. Если продолжить аналогию с лингвистикой, то все выглядит логично. Человек ежедневно использует не более 7-8% от собственного словарного запаса, такая же ситуация складывается и с использованием HTML-языка: в работе применяется небольшая часть команд, но это не значит, что можно не знакомиться с остальными. Они тоже рано или поздно пригодятся, хотя такие случаи и возникают разово.
+                        //-         p Принцип работы с HTML очень прост. Вам нужен какой-нибудь текстовый редактор, в котором нужно набрать или скопировать текст (контент сайта). Когда будет поставлена последняя точка, можно приступать к структурированию написанного. Текст делят на отдельные блоки, "промежутки" между которыми заполняются тэгами. Каждый отдельный элемент текста сопровождается парочкой команд: открывающей и закрывающей.
+                        //- .clearfix1    
+                        //- p.animatable.fadeInDownn Для примера, вам нужно оформить строчку из текста в виде подзаголовка первого уровня. Что необходимо сделать? Перед ней поставить открывающий тэг 
+                        //-     code &lt;h1&gt;
+                        //-     |, а в конце закрывающий 
+                        //-     code &lt;/h1&gt;
+                        //-     |. И такую работу нужно провести с каждым блоком материала: что-то оформить курсивом, что-то выделить жирным или в виде подзаголовка, списка. Когда работа будет закончена, файл просто сохраняют с расширением .html. Если открыть этот документ через браузер, то перед вами предстанет готова веб-страница.
+                        //- .headline-news.animatable.fadeInDown Как создать сайт: пошаговая инструкция работы с языком CSS
+                        //- .art-container.mt-mob.animatable.fadeInDownn
+                        //-     .art-box.float-l.mr-30.content-center-mob.animatable.fadeInDown
+                        //-             .art-box__wr-img
+                        //-                 img.img-shadow(src="assets/images/news/code-2620118_640.jpg")
+                        //-     .art-box.mt-mob
+                        //-         p Следующий на очереди для изучения — язык CSS. Вообще лучше изучать азы веб "лингвистики" параллельно. Если с помощью HTML создается структура страницы и разметка текста, то CSS помогает разработать "картинку", внешний вид сервиса. Этот формальный язык задает размер и тип шрифта, цвет текста, размеры блоков, расположение фоновых цветов и картинок. CSS позволяет сформировать модульную сетку — эдакий каркас, на котором распределяются функциональные блоки текстового наполнения: "шапка", "подвал", контент и сайдбар, если предусматривается его использование. 
+                        //-         p Если в языке HTML верстальщик оперировал тэгами, то в случае с CSS он будет работать с CSS-свойствами, которые задаются для каждого тэга. При создании кода сначала указывается тэг, а после него свойство. 
+                        //-         p Есть еще и такое понятие, как адаптивная верстка. Одна и та же страница может великолепно смотреться на широком мониторе ПК, но при этом потеряет всю свою привлекательность на небольшом экране смартфона. Чтобы подобный диссонанс не возникал, с помощью все того же языка CSS и медиазапросов, имеющихся в нем, можно адаптировать сайт для работы на разных устройствах. Хотя здесь большое значение имеют особенности целевой аудитории. Если предполагается, что сервис будет работать исключительно с мобильным или десктопным трафиком, то на него и следует ориентироваться во время верстки.
+                        //- .clearfix1
+                        //- .headline-news.animatable.fadeInDown JavaScript — еще один незаменимый помощник
+                        //- .art-container.mt-mob.animatable.fadeInDownn
+                        //-     .art-box.float-r.ml-30.content-center-mob.animatable.fadeInDown
+                        //-             .art-box__wr-img
+                        //-                 img.img-shadow(src="assets/images/news/javascript-736400_640.png")
+                        //-     .art-box.mt-mob
+                        //-         p Сайты, на которых постоянно что-то эффектно появляется, исчезает, сменяется другими изображениями, подпрыгивает, крутится и проявляет другие признаки "жизни", создаются с помощью языка JavaScript и его крупнейшей библиотеки jQuery. Язык довольно сложен в освоении. С его помощью верстальщики управляют двумя типами объективных моделей: DOM и BOM. Первая создает "дерево" блоков из HTML-документа. На каждой его "ветке" располагаются разные тэги.
+                        //-         p Вторая отвечает за создание аналогичного "дерева", но уже в рамках браузера. На "ветках" располагают браузерные элементы, а не тэги: адресные строки, окна, истории посещений и так далее. Язык JavaScript позволяет управлять структурами этих моделей по своему усмотрению.
+                        //- .clearfix1
+                        //- .headline-news.animatable.fadeInDown Серверный язык программирования
+                        //- .art-container.mt-mob.animatable.fadeInDownn
+                        //-     .art-box.float-l.mr-30.content-center-mob.animatable.fadeInDown
+                        //-             .art-box__wr-img
+                        //-                 img.img-shadow(src="assets/images/news/sadfsfd.png")
+                        //-     .art-box.mt-mob
+                        //-         p Чтобы создавать сайты потребуется знание серверного языка программироваия. К примеру подойдет PHP или Pyton. Также необходимо изучить: SQL. SQL представляет собой язык структурированных запросов, с помощью которых можно управлять MySQL — серверной базой данных сайта. PHP — основной язык программирования, который используется для создания скриптов. По аналогии с HTML и CSS, вместо тэгов и CSS-свойств в нем используются фреймворки. Они составляют основу "синтаксиса" этого языка, поэтому изучить их необходимо в первую очередь.
+                        //-         p      Чтобы работать с SQL и PHP, необходимо иметь на компьютере сервер базы данных MySQL, веб-сервер Apache и интерпретатор PHP. Скажем прямо, возиться с их установкой и настройкой придется долго, но есть альтернатива. Можно воспользоваться специальным пакетом, в котором "все включено". Одной из таких популярных сборок стал OpenServer. 
+                        //- .clearfix1
+                        //- p.animatable.fadeInDown После этого остается только выбрать подходящий "движок" для сайта среди многочисленных CMS-систем. Не будем вдаваться в подробности их классификаций, но выбрать действительно есть из чего. Можно даже пойти по легкому пути и подыскать такую CMS, которая сама поможет создать собственный сайт и необходимость в изучении всех вышеописанных языков отпадет сама. Здесь есть одно "но": не рассчитывайте на оригинальное оформление. Среди готовых шаблонов уникальных нет. 
+                        //- p.animatable.fadeInDown После выбора движка остается только купить домен и хостинг, то есть "место под солнцем", где будет располагаться ваш сайт в глобальной паутине. Домен и хостинг обычно покупают сразу же в одной и той же компании.
+                        //- p.animatable.fadeInDown В данной статье я привел пошаговую инструкцию о том как создать сайт. Инструкция будет актуальна для будущих веб мастеров. Если вы осилите приведенные выше инстременты, то с легкости сможете создавать сайты. Удачи вам! 
+                        
+                        //- p.animatable.fadeInDownn Однако, если вы спросите людей старше 30 лет, они, скорее всего, будут сомневаться в их способности учиться. Когда спрашивают о программировании, оптимизм начинает падать больше. Правда, чем старше  люди, тем меньше вероятность того, что они будут стремиться к получению знаний по сравнению с молодыми людьми или что-то в этом роде.
+                        //- p.animatable.fadeInDownn В сегодняшней статье мы рассмотрим простое руководство для людей старше 30 лет, которые заинтересованы в обучении программированию.
+                        //- .art-container.mt-mob
+                        //-     .art-box.float-l.mr-30.content-center-mob
+                        //-         .art-box__wr-img
+                        //-             img.img-shadow(src="assets/images/news/code.jpg")
+                        //-     .art-box.mt-mob
+                        //-         p Программирование - самая востребованная профессия в настоящее время и востребованная в далеком будущем.
+                        //-         p Кроме того, есть много людей, которым за 30 и которые хотят перейти на программирование из-за автоматизации и страха потерять работу. Они в основном пронизаны скорее сомнениями в себе, нежели способностью учиться.
+                        //-         p Эта должность позволит им развеять все сомнения и сделать их лучшими учениками. Если вы молоды, вы можете продолжать читать статью, так как советы могут дать вам интересный взгляд на ваш учебный опыт.
+                        //- .clearfix1
+                        //- .headline-news.animatable.fadeInDownn Однако, прежде чем углубиться в основную тему, давайте подробнее рассмотрим, как меняется интеллект через определенный период времени.
+                        //- p.animatable.fadeInDownn Как работает наш интеллект, когда мы поднимаемся на новый уровень.
+                        //- p.animatable.fadeInDownn Чтобы понять, как работает интеллект человека, сначала необходимо понять разницу между текучим интеллектом и кристаллизованным интеллектом.
+                        //- p.animatable.fadeInDownn “Подвижный”интеллект - это ваша способность решать новые проблемы по мере их возникновения. Это можно легко охарактеризовать как способность решать проблемы и легко адаптироваться к новым ситуациям. Кристаллизованный интеллект, с другой стороны, - это способность использовать свои знания и опыт для решения окружающих проблем. Подробнее о них читайте здесь.
+                        //- p.animatable.fadeInDownn Эти два типа интеллекта со временем меняются. Разум жидкости со временем уменьшается, в то время как кристаллизованный интеллект улучшается во взрослом возрасте.
+                        //- .art-container.mt-mob
+                        //-     .art-box.float-r.ml-30.content-center-mob
+                        //-         .art-box__wr-img
+                        //-             img.img-shadow(src="assets/images/news/abc.jpg")
+                        //-     .art-box.mt-mob
+                        //-         p.span_bold_roz Стоит ли это учиться программировать после 30 лет?
+                        //-         p Когда дело доходит до программирования, вам лучше иметь правильное сочетание кристаллизованного и подвижного интеллекта, чтобы помочь вам. Молодость может помочь быстрее освоить материал, но она не позволяет использовать знания в реальном мире интуитивно. Пожилые люди имеют лучшее понимание и, следовательно, выше-кристаллизованный интеллект, чтобы помочь им.
+                        //-         p.span_bold_roz Как стать программистом в 30 лет?
+                        //-         p С полным пониманием интеллекта и влияния возраста на него, давайте перейдем к практическому руководству о том, как стать программистом в 30 лет.
+                        //- .clearfix1
+                        //- h2.headline-news.animatable.fadeInDownn Что нужно знать чтобы стать программистом:
+
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 01.
+                        //-             span.art__news-title Выберите свой первый язык программирования
+                        //-             p Первый шаг - это выбор языка программирования. Для начала стоит выбрать Python в качестве первого языка программирования. Его легко выучить и предоставить почти английский синтаксис. Другой альтернативой является язык программирования Java. Вы также можете начать с других технологий, таких как HTML, язык разметки, используемый для структурирования контента в Интернете. Другие языки программирования, с которыми вы можете работать – С,С++,Ruby и т.д., в зависимости от того, чего вы пытаетесь достичь. Выберите Ruby, если вы хотите заниматься веб-разработкой. Си и Си++ являются отличным выбором для выполнения программирования на системном уровне или просто изучения компьютерных наук.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 02.
+                        //-             span.art__news-title Узнать о компьютерных науках
+                        //-             p  Программирование - это больше, чем простое кодирование. Речь идет о понимании принципов компьютерных наук и их использовании для решения сложных реальных проблем. Как учащийся, вы должны понимать основы компьютерных наук и то, как они работают. Вы можете сделать это, пройдя любой из доступных онлайн-курсов по основам информатики. Ознакомьтесь с некоторыми из дружелюбных к новичкам курсов по изучению информатики.  
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 03.
+                        //-             span.art__news-title Развивать аналитические навыки и навыки решения проблем
+                        //-             p Работа программиста вращается вокруг решения реальных проблем. Это может быть как создание сайта для стартапа, так и решение сложных задач, таких как разработка алгоритма для самостоятельного вождения автомобиля. Обладая аналитическими навыками и навыками решения проблем, вы можете легко справиться с работой программиста. Вы можете улучшить свои навыки, ежедневно решая проблемы, либо создавая проект с нуля, либо решая алгоритмические задачи.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 04.
+                        //-             span.art__news-title Читать книги
+                        //-             p Самая большая ошибка, которую совершают новички, это не чтение книг. Книги - это золотая жила для информации, и то же самое справедливо и при обучении программированию.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 05.
+                        //-             span.art__news-title Регулярное вещание
+                        //-             p Еще одной проблемой, с которой сталкиваются многие начинающие, является отсутствие сообщества или мотивации для продолжения обучения, особенно когда речь идет о людях старше 30 лет.
+                        //-             p Вы можете выбрать трансляцию своих учебных занятий и помочь другим получить мотивацию с вашей преданностью делу. Кроме того, вы можете учиться у других пользователей и делиться с ними информацией том, что нужно знать чтобы стать программистом.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 06.
+                        //-             span.art__news-title Проекты
+                        //-             p Ключом к успеху являются проекты. Проекты означают проверку ваших теоретических знаний. С помощью проектов вы сможете применить свои навыки программирования и узнать больше о своем подразделении. Чем больше ты делаешь, тем лучше становишься. Так что делайте много проектов в свободное время, а также обучайте людей, транслируя свой проект.
+                        
+                        //- .art-box__wr-img.img-shadow3
+                        //-     img.img-news(src="assets/images/news/chest.jpg")
+                        //- h2.headline-news.animatable.fadeInDownn Теперь давайте рассмотрим перспективы данной профессии
+
+                        //- ul.art__news-list   
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 01.
+                        //-             span.art__news-title Засилье гаджетов требует все большего количества программистов, и в дальнейшем их численность будет только расти
+                        //-             p Смартфоны, планшеты, очки виртуальной реальности, гироскутеры, дроны, беспилотные автомобили, фитнес-браслеты, смарт-часы - все это требует огромной армии программистов, которые ежедневно создают новые приложения, чтобы упростить различные процессы повседневной жизни.  Подобные технологии уже породили целые пласты новых профессий среди программистов, вроде архитекторов виртуальной реальности или разработчиков систем с оперирование большими данными. Более того, через несколько лет знание основ программирования станет неотъемлемой частью любого образованного человека, то она - менеджер, то юрист, или агроном.
+
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 02.
+                        //-             span.art__news-title Программист может работать в любой точке мира, не выходя из дома
+                        //-             p Программисты раньше остальных поняли, что работать из офиса не обязательно.  Можно быть эффективным, работая удаленно.  Именно поэтому среди программистов так много фрилансеров.
+                        //-             p Действительно, какой смысл программисту сидеть в офисе, если его код все равно никто не понимает, кроме него самого?  Нет, конечно, если офис сконструирован как креативный пространство с бесплатными пирожными и кофе, то ходить туда - это даже удовольствие.  Однако такие удобства, как правило, могут предложить только крупные международные IT-компании.
+                        //-             p Программист со знанием английского языка может спокойно работать с зарубежными заказчиками, ведь язык программирования универсальная для всех.  Отсюда следует довольно привлекательный момент для наших специалистов - оплата в валюте.  Все это далеко не секрет, и приток неофитов в профессию не прекращается.  Впрочем, спрос растет еще быстрее.
+                        //-     li.art__news-item.animatable.fadeInDownn
+                        //-         .art__news-wrap
+                        //-             span.art__news-num 03.
+                        //-             span.art__news-title Для получения образования совершенно не обязательно учиться в вузах
+                        //-             p В вузах учат теории, а работодателям нужна практика.  Даже опытные инженеры, которые устраиваются на работу в солидные международные компании, проходят шестинедельные курсы, значительная часть которых посвящена программированию.
+                        
+                        //- p.animatable.fadeInDownn Но как же тогда люди приходят в профессию?  Некоторые учатся самостоятельно, а многие заканчивает курсы, которые, в большинстве случаев, вполне достаточно, чтобы найти первую работу в этой сфере.  Обучение можно пройти даже отдаленно, а после выпуска пойти на стажировку, которое поможет закрепить все знания и выйти на рынок труда настоящим специалистом.
+                        //- .art-box__wr-img
+                        //-     img.img-news.img-shadow(src="assets/images/news/prg.jpg")
+                        
+                        //- .art-container.flex.animatable.fadeInDownn.mt-40
+                        //-     .art-box.flex-dir-centr.mr-30
+                        //-         .span_bold_roz Специфика работы программиста:
+                        //-         ul.art__news-list   
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text Постоянное профессиональное самосовершенствование,
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text Высокий спрос на рынке,
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text Высокая заработная плата,
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text Работать можно не имея диплома,
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text Преимущественно творческая профессия.
+                        //-     .art-box.flex-dir-centr
+                        //-         .art-box__wr-img
+                        //-             img.img-shadow(src="assets/images/news/work.jpg")
+                            
+                        //- .art-container.flex.animatable.fadeInDownn.mt-40
+                        //-     .art-box.flex-dir-centr.mr-30.fl-order-2
+                        //-         .art-box__wr-img
+                        //-             img.img-shadow(src="assets/images/news/success.jpg")
+                        //-     .art-box.flex-dir-centr.fl-order-1
+                        //-         .span_bold_roz  Перспективы профессии программиста:
+                        //-         ul.art__news-list   
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text  Успешный начинающий программист в будущем может претендовать на должности:
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text  руководитель группы программистов,
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text IT-директор, 
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text менеджер проекта,
+                        //-             li.art__news-item
+                        //-                 .art__news-wrap
+                        //-                     span.art__news-num &#10004;
+                        //-                     span.art__news-text можно перемещаться в рамках специальности, совершенствуясь профессионально.
+                    
+                        //- p.art__news-num.animatable.fadeInDownn Заключение
+                        //- p.animatable.fadeInDownn Трудно начать, но как только вы это сделаете, не должно быть никакого оглядывания назад. Кроме того, это хорошая идея, чтобы управлять своими ожиданиями на протяжении всего путешествия. Научиться работать с кодом непросто, и для этого требуется специальная практика. Если вы старше 30 лет и находитесь на этапе изучения, то прокомментируйте это ниже и поделитесь своим опытом.
+                    .box__addition
+                        .block__like
+                            p.like__question Была ли данная статья полезна?
+                            .wrap__like--svg
+                                svg(width="40" height="40" data-id="2").like-svg
+                                    use(xlink:href="assets/sprite/sprite.svg#thumb-up-black-hand-symbol")
+                                svg(width="40" height="40" data-id="2").dislike-svg
+                                    use(xlink:href="assets/sprite/sprite.svg#thumbs-down-silhouette")
+                        include ../common/tabs.pug
+                                    
+                                       
+                                       
+                                
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

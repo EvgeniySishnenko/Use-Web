@@ -1,0 +1,86 @@
+extends ../template
+
+block variables
+    - var title = 'Новости'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_news--page
+        .container.container__navigation.container__navigation--news
+            include ../common/page-navigation.pug
+            .block__button--category
+                .button--category Разделы
+        .wrapper__news
+            .block__left
+                aside.aside
+                    .aside__section--title Разделы
+                    ul.aside__list
+                        - for(var i = 0; i < 7; i++){
+                            li.aside__item 
+                                a(href="title_news.html").aside__link Технологии, инструменты,  сервисы
+                        -}
+                        
+            .block__right
+                main.main
+                    article.article
+                        .block__h2__title.block__h2__title--testspages
+                            svg(width="45" height="45").h2__title-svg
+                                use(xlink:href="assets/sprite/sprite.svg#ecological-generator-tool-of-rotatory-fan")
+                            h1.h2__title Генератор паролей
+                        
+                        p В данном разделе можно воспользоваться онлайн генетором паролей. Выбрать надежный пароль ипользуя специальные настройки генератора
+
+                        .genpass
+                            .genpass__list
+                                .genpass__item-input-pass
+                                    input(type="text").genpass__item-pass
+                                    .genpass__item-wr
+                                        .genpass__item-btn Сгенерировать
+                                        .genpass__item-copy 
+                                            svg.genpass__item--svg
+                                                use(xlink:href="assets/sprite/sprite.svg#copy")  
+                                .genpass__item-control
+                                    .genpass__item-control-wrap
+                                        .genpass__item-expression.pls
+                                            svg.genpass__item-control-svg
+                                                use(xlink:href="assets/sprite/sprite.svg#addition-sign")
+                                        input(type="number" value="6").genpass__item-num
+                                        .genpass__item-expression.mns
+                                            svg.genpass__item-control-svg
+                                                use(xlink:href="assets/sprite/sprite.svg#minus-gross-horizontal-straight-line-symbol")
+                                .genpass__item-chk-wr
+                                    label.genpass__item-label
+                                        input(type="checkbox" checked="checked" data-val="chk-numbers" id="numbers").genpass__item-inp.checkbox
+                                        span.checkbox-custom
+                                        span.genpass__item-span Использовать числа
+                                    label.genpass__item-label
+                                        input(type="checkbox" checked="checked" id="letters" data-val="chk-letters").genpass__item-inp.checkbox
+                                        span.checkbox-custom
+                                        span.genpass__item-span Использовать буквы
+                                    
+                                    label.genpass__item-label
+                                        input(type="checkbox" data-val="chk-characters" id="characters").genpass__item-inp.checkbox
+                                        span.checkbox-custom
+                                        span.genpass__item-span Другие символы
+                                    
+
+
+                    
+                    
+                    
+                    .box__addition
+                        .block__like
+                            p.like__question Была ли данная страница полезна?
+                            .wrap__like--svg
+                                svg(width="40" height="40" data-id="2").like-svg
+                                    use(xlink:href="assets/sprite/sprite.svg#thumb-up-black-hand-symbol")
+                                svg(width="40" height="40" data-id="2").dislike-svg
+                                    use(xlink:href="assets/sprite/sprite.svg#thumbs-down-silhouette")
+                       
+                                    
+                  
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

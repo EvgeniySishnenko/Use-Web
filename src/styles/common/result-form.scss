@@ -1,0 +1,41 @@
+.result__success {
+    position: fixed;
+    top: -100px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 320px;
+    height: 80px;
+    background-color: rgba($dark_green, 0.9);
+    box-shadow: 0px 0px 5px 0px rgba(0,99,86,1);
+    transition: all .4s;
+    z-index: 100;
+}
+.result__success-text { 
+    width: 98%;
+    height:100%;  
+    margin: 0 auto; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.success-text {
+    font-family: 'Roboto-medium';
+    font-size: 18px;
+    color: #f6f6f6;
+}
+.block-close {
+    position: absolute;
+    bottom: -15px;
+    right: 1%;
+}
+.close__success-svg {
+    fill: #f6f6f6;
+    width: 12px;
+    left: 12px;
+    cursor: pointer;
+}
+.result__success--active {
+    top: 100px;
+    left: 50%;
+}

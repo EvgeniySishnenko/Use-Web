@@ -1,0 +1,17 @@
+.tabs
+    ul.tabs__list
+        li.tabs__item.tabs__item--active Комментарии
+        li.tabs__item Статьи раздела
+    .contant__tabs        
+        .contant__tabs__item
+            include comments.pug 
+        .contant__tabs__item
+            ul.contant__news__list
+                - for(var i = 0; i < 10; i++) {
+                    li.contant__news__item
+                        svg.news-svg
+                            use(xlink:href="assets/sprite/sprite.svg#fountain-pen")
+                        a.contant__news__link(href="#") Как стать программистом с нуля
+                -}                          
+                           
+

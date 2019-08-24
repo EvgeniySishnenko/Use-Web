@@ -1,0 +1,51 @@
+extends ../template
+
+block variables
+    - var title = 'Новости раздела'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_news--page
+        .container.container__navigation.container__navigation--news
+            include ../common/page-navigation.pug
+            .block__button--category
+                .button--category Разделы
+        .wrapper__news
+            .block__left
+                aside.aside
+                    .aside__section--title Разделы
+                    ul.aside__list
+                        - for(var i = 0; i < 7; i++){
+                            li.aside__item 
+                                a(href="title_news.html").aside__link Технологии, инструменты,  сервисы
+                        -}
+                        
+            .block__right
+                .block__h2__title.block__h2__title__title-news-pages
+                    svg(width="45" height="45").h2__title-svg.h2__title-svg__title-news-pages
+                        use(xlink:href="assets/sprite/sprite.svg#man-reading")
+                    h2.h2__title.margin-left.h2__title__title-news-pages SEO
+                .block__title__news
+                    ul.block__title__list
+                        - for(var i = 0; i < 7; i++){
+                            li.block__title__item
+                                a(href="#").block__title__link
+                                    .wrapper--link
+                                        .link--svg
+                                            svg(width="40" height="40").block__title-svg
+                                                use(xlink:href="assets/sprite/sprite.svg#written-page")
+                                        .link--title Новости веб разработок. Тренды веб дизайна 
+                                    .link--text это один из самых известных языков программирования, 
+                                               
+                                                
+                        -}                  
+                
+                                    
+                                       
+                                       
+                                
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

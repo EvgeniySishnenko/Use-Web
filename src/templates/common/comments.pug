@@ -1,0 +1,74 @@
+.container__comments
+    .block__form__comments
+        .button__add-code
+            a.link__add-code(href="add-first") Вставить код
+        form.form__comments
+            .wrap__textarea
+                textarea(data-user=""+21 data-news=""+22)#add-first.comments__textarea_text
+            input(type="submit" value="Опубликовать").add__comments 
+            .default_message Чтобы оставлять кооментарии 
+                a(href="#").link__default.authPopup авторизуйтесь
+                |&nbsp; или &nbsp;
+                a(href="#").link__default.registPopup зарегистрируйтесь
+    .block__comments
+        .block__h2__title.block__h2__title-comments
+            svg(width="40" height="40").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#ninja-portrait")
+            h2.h2__title.margin-left.style__news--mobileView Комментарии к статье
+        ul.comments__list
+            - for(var i = 0; i < 1; i++) {
+                li.comments__item
+                    .content__comments
+                        span.comments__title Петр445
+                        span.comments__date 23.10.18
+                        p.comments__text самому языку JavaScript. Эта часть позволит вам изучить JavaScript с 
+                            |нуля или упорядочить и дополнить существующие знания. Мы будем использовать браузер в качестве окружения, 
+                            |но основное внимание будет уделяться именно Эта часть позволит вам изучить JavaScript с нуля или упорядочить и 
+                            |дополнить существующие знания. Мы будем использовать браузер в качестве окружения, но основное внимание будет уделяться именно 
+                            |Эта часть позволит вам изучить JavaScript с нуля или упорядочить и дополнить существующие знания.
+                        .block__sub__comments
+                            a.comments__reply(data-reply="reply"+i) Ответить
+                            a.delete__comments(data-comments=""+23) Удалить   
+                            a.comments__show(data-comments="comments"+i) Показать 12 ответов
+                            .wrap__sub__comments(id="reply"+i)
+                                .wrap__form(data-reply="reply"+i)
+                                    .button__add-code.button__add-code-sub
+                                        a.link__add-code(href="add-"+i) Вставить код                           
+                                    form.form__sub__comments
+                                        .wrap__sub__textarea(id="wrap-add-"+i)
+                                            textarea(id="add-"+i data-user=""+21 data-news=""+22 data-subcomments=""+23).comments__textarea__sub_text
+                                        input(type="submit" value="Ответить" data-textarea="add-"+i).add__sub__comments
+                                        .default_message Чтобы оставлять кооментарии 
+                                            a(href="#").link__default.authPopup авторизуйтесь
+                                            |&nbsp; или &nbsp;
+                                            a(href="#").link__default.registPopup зарегистрируйтесь
+                                ul.comments__sub__list(id="list-add-"+i)
+                                    - for(var f = 0; f < 0; f++) {
+                                        li.comments__sub__item
+                                            .content__comments
+                                                span.comments__title Петр445
+                                                span.comments__date 23.10.18
+                                                p.comments__text самому языку JavaScript. Эта часть позволит вам изучить JavaScript с 
+                                                    |нуля или упорядочить и дополнить существующие знания. Мы будем использовать браузер в качестве окружения, 
+                                                    |но основное внимание будет уделяться именно Эта часть позволит вам изучить JavaScript с нуля или упорядочить и 
+                                                    |дополнить существующие знания. Мы будем использовать браузер в качестве окружения, но основное внимание будет уделяться именно 
+                                                    |Эта часть позволит вам изучить JavaScript с нуля или упорядочить и дополнить существующие знания.
+                                                .wrap__sub__links
+                                                    a.delete__sub__comments(data-subcomments=""+23) Удалить 
+                                            .complaint
+                                                .wrap__complaint-svg
+                                                    svg.complaint-svg(data-complaint="subComplaint"+f)
+                                                        use(xlink:href="assets/sprite/sprite.svg#roach")
+                                                ul.complaint__list(id="subComplaint"+f)
+                                                    li.complaint__item(data-id=""+f data-value="off-topic") Пометить как неуместное
+                                                    li.complaint__item(data-id=""+f data-value="mat") Содержит мат
+                                    -}                                             
+                    .complaint
+                        .wrap__complaint-svg
+                            svg.complaint-svg(data-complaint="complaint"+i)
+                                use(xlink:href="assets/sprite/sprite.svg#roach")
+                        ul.complaint__list(id="complaint"+i)
+                            li.complaint__item(data-id=""+i data-value="off-topic") Пометить как неуместное
+                            li.complaint__item(data-id=""+i data-value="mat") Содержит мат
+            -}
+        .default_message Комментарии отсутствуют

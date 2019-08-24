@@ -1,0 +1,50 @@
+section.section.section_tests
+    .block__title
+        .block__title-wr.test
+            svg(width="45" height="45").title-svg
+                use(xlink:href="assets/sprite/sprite.svg#test")
+            .title.title_adaptive Тестирование знаний 
+    .container__tests
+        .wrap__tests__shrt__text
+            .tests__shrt-text В данном разделе вы сможете пройти тесты 
+                                | по следующим дисциплинам: HTML, CSS, Flexbox, CSS grid, JavaScript, также есть тесты, состоящие из 
+                                | часто задаваемых вопросов при собеседовании, 
+                                | на должности HTML-верстальщик и Frontend- разработчик.
+            .shrt__title Ответьте правильно на вопрос   
+            .shrt__txt (Для выбора ответа можно 
+                span нажать на плюс 
+                | или
+                span  перетащить элемент 
+                | в правый блок)
+            .tests__question Какое значение отсутсвует у свойства justify-content ?
+            .wrap-result 
+                    .res-txt Результат:
+                    .res-dspl-true.dspl-disable Правильно
+                    .res-dspl-false.dspl-disable Не правильно
+        .wrap_test
+            .tests__left
+                ul.tests__list.drop-zone
+                    li.tests__item(draggable="true" data-id="1" attr="false")
+                        .item-num 1
+                        .item-txt space-between
+                        .item-pls 
+                    
+                    li.tests__item(draggable="true" data-id="2" attr="true")
+                        .item-num 2
+                        .item-txt column-reverse
+                        .item-pls 
+                    li.tests__item(draggable="true" data-id="3" attr="false") 
+                        .item-num 3
+                        .item-txt inherit
+                        .item-pls 
+
+                
+            .tests__right     
+                
+                ul.tests__list-right.drop-zone
+            .test__wrap-pic
+                img(src="assets/images/strela1.png").strela-img               
+        .block__button-test
+            a(href="#").button__link-test Пройти тест          
+    
+                   

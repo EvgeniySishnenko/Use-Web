@@ -1,0 +1,57 @@
+extends ../template
+
+block variables
+    - var title = 'Добро пожаловать'
+
+block content
+    section.section.section__header--home
+        include ../common/header.pug 
+        .first-screen-wr
+            .first-screen-left 
+               .first-screen__text.first-screen__text-open 
+                    .first-screen__text-wrap-mobile
+                        span.text-web-mob Web
+                        span.text-hyphen-mob /
+                        span.text-dev-mob разработка
+
+                    .first-screen__text-wrap1
+                        span.text-web 
+                            i.i Web
+                        span.text-hyphen /
+                        span.text-dev
+                            i.i разработка
+                    .first-screen__text-wrap2 Разработка сайтов - это просто
+                    .first-screen__text-wrap3 Бесплатная библиотека учебного пособия по созданию сайтов. 
+                        br
+                        |От знакомства с языками программирования,
+                        br
+                        |выбора профессии, до создания красивых 
+                        br
+                        |и современных интерфейсов и продвижения в сети интернет.
+                    
+            .first-screen-right        
+                .parallax
+                    .parallax-layer1
+                        img.parallax-img1(src="assets/images/man2.png")
+                    .parallax-layer2
+                        .parallax-img-wr
+                            img.parallax-img2(src="assets/images/cod.jpg")
+                .mobile-default
+                    img(src="assets/images/man3.png").mobile-default-img
+        
+        
+    include ../section/about.pug
+    include ../section/topics.pug
+    include ../section/tests.pug
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug
+    
+
+    
+    
+
+
+
+                                

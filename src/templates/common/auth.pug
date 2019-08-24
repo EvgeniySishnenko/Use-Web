@@ -1,0 +1,32 @@
+.auth__popup
+    .auth__close
+        svg.auth__close-svg
+            use(xlink:href="assets/sprite/sprite.svg#cross-remove-sign")
+    .block__h2__title
+        svg(width="40" height="40").h2__title-svg
+            use(xlink:href="assets/sprite/sprite.svg#crown")
+        h2.h2__title.margin-left Авторизация
+    .block__form
+        form.form__auth
+            .wrapper__input--login.wrapper__input--login--auth
+                input(placeholder="Введите Ваш Email" type="email" name="auth__input--login").auth__input--login
+            .wrapper__input--pass.wrapper__input--pass--auth
+                input(placeholder="Пароль" type="password" name="auth__input--pass").auth__input--pass
+            .block__massage.block__massage--auth
+            input(type="submit" value="Авторизоваться").send__auth
+            a(href='#' class="link-forgot_pass") Забыли пароль?
+            
+.forgot__popup
+    .forgot__close
+        svg.forgot__close-svg
+            use(xlink:href="assets/sprite/sprite.svg#cross-remove-sign")
+    .block__h2__title
+        svg(width="40" height="40").h2__title-svg
+            use(xlink:href="assets/sprite/sprite.svg#tools-cross-settings-symbol-for-interface")
+        h2.h2__title.margin-left Восстановление пароля
+    .block__form
+        form.form__forgot
+            .wrapper__input--login.wrapper__input--email-forgot
+                input(placeholder="Введите Ваш Email" type="email" ).forgot__input--mail
+            .block__massage.block__massage--forgot
+            input(type="submit" value="Отправить пароль").send__mail-forgot

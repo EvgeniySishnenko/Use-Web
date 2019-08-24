@@ -1,0 +1,129 @@
+.header {
+    width: 100%;
+    height: 80px;  
+    background-color:  $dark_green;
+    @include laptop874 {
+        height: 100px;  
+	}
+}
+.section__header--home {
+    .header {
+        background-color:#1d3740;
+        position: relative;
+        z-index: 30;
+    }
+
+    .menu__link {
+        color: $dark_green;
+        &:hover {
+            color: rgb(214, 197, 120);
+        }
+    }
+}
+.header__logo {
+    width: 15%;
+    height: 100%;
+    position: relative;
+    padding-top: 10px;
+    @include desktop {
+        width: 25%;
+    }
+    @include laptop874 {
+        width: auto;
+        text-align: center;
+	}
+ }
+.logo__link {
+    text-decoration: none;
+    font-family: 'Gagalin';
+    font-size: 40px;
+    color: #fff;
+
+}
+.logo__link--web {
+    color: rgb(214, 197, 120);
+}
+.logo__link--use {
+    color: rgb(125, 228, 197);
+}
+.menu__header {
+    width: 85%;
+    height: 100%; 
+    display: flex;
+    justify-content: flex-end;
+    @include desktop {
+        width: 75%;
+    }
+    @include laptop874 {
+        width: auto;
+        margin-top: 10px;
+        justify-content: center;
+    }
+    @include tablets {
+        display: none;
+	}
+ }
+.menu__list {
+    display: flex;
+    justify-content: flex-end; 
+    align-items: flex-end;
+    height: 55%;
+    @include tablets {
+        justify-content: center; 
+	}
+}
+.menu__item {
+    margin-left: 20px;
+     &:first-child {
+        margin-left: 0px;
+    }
+}
+.menu__link {
+    text-decoration: none;
+    font-family: 'robotobold';
+    font-size: 18px;
+    color: rgb(58, 58, 58);
+    transition: all 0.4s;
+    &:hover {
+        color: #fff;
+    }
+
+    &:active {
+         color: #f6f6f6;
+    }
+}
+.block__auth {
+    height: 55%;
+    margin-left: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    margin-right: 10px;
+     @include tablets {
+        margin-right: 0;
+	}
+}
+.section__header--home {
+    .auth__pic--svg {
+        fill: $dark_green;
+    }
+    .auth__name {
+        color: $dark_green;
+        border-bottom: 1px solid $dark_green;
+    }
+}
+.auth__pic {
+    position: relative;
+    transform: translateY(7px);
+}
+.auth__pic--svg {
+    fill: #2b2929;
+}
+.auth__name {
+    cursor: pointer;
+    border-bottom: 1px solid rgb(58, 58, 58);
+    font-family: 'Roboto-light';
+    &:hover {
+         border-bottom: none;
+    }
+}

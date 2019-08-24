@@ -1,0 +1,87 @@
+extends ../template
+
+block variables
+    - var title = 'Профиль'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_topics--page.section_contacts
+        .container.container__navigation
+            include ../common/page-navigation.pug
+        .block__h2__title
+            svg(width="40" height="40").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#ninja-portrait")
+            h2.h2__title.margin-left Профиль
+        .container
+            .block__profile
+                .profile__shrt-text Упраление акаунтом
+                .wrap__profile
+                    .profile__data(data-bind="#firstName")
+                        .profile-title Имя пользователя:
+                        .profile-value#firstNameValue Евгений
+                        .block__profile-svg#firstNameSvg
+                            svg(width="28" height="18").profile-svg
+                                use(xlink:href="assets/sprite/sprite.svg#pencil")
+                        .block__form-edit#firstNameForm
+                            form.form__edit
+                                input(class="input__edit" type="text" value="Евгений" id="firstNameInput")
+                                input(class="save__edit" id='firstNameSave' data-button="firstName"  type="submit" value="Сохранить")
+                                a(href="firstNameCancel").cancel__edit#firstNameCancel Скрыть
+                            .error__container#firstNameError
+                    .profile__data(data-bind="#lastName")
+                        .profile-title Фамилия пользователя:
+                        .profile-value#lastNameValue Сишненко
+                        .block__profile-svg#lastNameSvg
+                            svg(width="28" height="18").profile-svg
+                                use(xlink:href="assets/sprite/sprite.svg#pencil")
+                        .block__form-edit#lastNameForm
+                            form.form__edit
+                                input(class="input__edit" type="text" value="Сишненко" id="lastNameInput")
+                                input(class="save__edit" id='lastNameSave' data-button="lastName" type="submit"  value="Сохранить")
+                                a(href="lastNameCancel").cancel__edit#lastNameCancel Скрыть
+                            .error__container#lastNameError
+                    .profile__data(data-bind="#login")
+                        .profile-title Логин пользователя:
+                        .profile-value#loginValue Evgeniy444
+                        .block__profile-svg#loginSvg
+                            svg(width="28" height="18").profile-svg
+                                use(xlink:href="assets/sprite/sprite.svg#pencil")
+                        .block__form-edit#loginForm
+                            form.form__edit
+                                input(class="input__edit" type="text" value="Evgeniy444" id="loginInput")
+                                input(class="save__edit" id='loginSave' data-button="login" type="submit" value="Сохранить")
+                                a(href="loginCancel").cancel__edit#loginCancel Скрыть
+                            .error__container#loginError
+                    .profile__data(data-bind="#email")
+                        .profile-title Email пользователя:
+                        .profile-value#emailValue sishnenko@mail.ru
+                        .block__profile-svg#emailSvg
+                            svg(width="28" height="18").profile-svg
+                                use(xlink:href="assets/sprite/sprite.svg#pencil")
+                        .block__form-edit#emailForm
+                            form.form__edit
+                                input(class="input__edit" type="email" value="sishnenko@mail.ru" id="emailInput")
+                                input(class="save__edit" id='emailSave' data-button="email"  type="submit" value="Сохранить")
+                                a(href="emailCancel").cancel__edit#emailCancel Скрыть
+                            .error__container#emailError
+                    .profile__data(data-bind="#pass")
+                        .profile-title Изменить пароль:
+                        .profile-value#passValue
+                        .block__profile-svg#passSvg
+                            svg(width="28" height="18").profile-svg
+                                use(xlink:href="assets/sprite/sprite.svg#pencil")
+                        .block__form-edit#passForm
+                            form.form__edit
+                                input(placeholder="Старый пароль" class="input__edit input__edit--pass" type="pass"  id="passOldInput")
+                                input(placeholder="Новый пароль" class="input__edit input__edit--pass" type="pass"  id="passNewInput")
+                                input(class="save__edit" id='passSave' data-button="pass"  type="submit" value="Сохранить")
+                                a(href="passCancel").cancel__edit#passCancel Скрыть
+                            .error__container#passError
+
+           
+            
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

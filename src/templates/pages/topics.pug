@@ -1,0 +1,34 @@
+extends ../template
+
+block variables
+    - var title = 'Темы блога'
+
+block content
+    section.section_header
+        include ../common/header.pug  
+    section.section.section_topics--page
+        .container
+            include ../common/page-navigation.pug
+        .block__h2__title
+            svg(width="45" height="45").h2__title-svg
+                use(xlink:href="assets/sprite/sprite.svg#online-graduation")
+            h2.h2__title Темы и разделы
+        .container
+            .accordion
+                ul.accordion__list
+                    - for(var y = 0; y < 7; y++) {
+                        li(id="accord-"+y).accordion__item
+                            span(class="accordion__link") Технологии, инструменты сервисы
+                                span.accordion__link-text Также есть урокиffgggggggg    gg gggggg gggggggg gggg ggggg ggg fdgdffffff fdgds по HTML и CSS верстке, которые бесспорно помогут новичкуee освоить данный предмет.
+                            ul.accordion__sub__list
+                                - for(var i = 0; i < 7; i++) {
+                                    li.accordion__sub__item
+                                        svg.accordion__sub__svg
+                                            use(xlink:href="assets/sprite/sprite.svg#written-page")
+                                        a(href="#" class="accordion__sub__link") Плагины для брекетсПлагины для брекетс Плагины для брекетс Плагины для брекетс Плагины для брекетс Плагины для брекетс
+                                -}                                
+                    -}                             
+    include ../common/footer.pug
+    include ../common/menu-mobile.pug
+    include ../common/result-form.pug
+    include ../common/auth.pug

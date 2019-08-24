@@ -1,0 +1,119 @@
+.block__title__h2 {
+    width: 100%;
+}
+.title__h2 {
+    text-align: center;
+    text-transform: uppercase;
+    color: $blue;
+    font-family: 'Roboto-medium';
+    font-weight: 500;
+}
+.block__h2__title__title-news-pages {
+    @include phones {
+        margin-bottom: 5px;
+    }
+}
+.h2__title__title-news-pages {
+    @include laptop874 {
+        font-size: 28px;
+    }
+    @include phones {
+        font-size: 16px;
+        font-family: 'Roboto-medium';
+        text-transform: capitalize;
+    }
+}
+.h2__title-svg__title-news-pages {
+    @include tablets600 {
+        display: none;
+    }
+}
+.block__title__news {
+    width: 100%;
+    height: auto;  
+}
+.block__title__list {
+    width: 70%;
+    height: auto;
+}
+.block__title__item {
+    width: 100%;
+}
+.block__title__list {
+    width: 600px;
+    margin: 0 auto;
+
+    @include laptop {
+        width: 500px;
+    }
+    @include tablets600 {
+        width: 90%;
+    }
+}
+.block__title__item {
+    width: 100%;
+    margin-bottom: 30px;
+    padding: 10px;
+    border-radius: 10px;
+    transition: all .3s;
+    &:not(:hover) {
+        box-shadow: 0px -2px 23px 0px rgba(0,0,0,0.75);
+    }
+}
+
+.block__title__link {
+    display: block;
+    width: 100%;
+    height: auto;
+    text-decoration: none;
+    transition: all 0.3s;
+    &:hover {
+        .link--title {
+            color: rgb(97, 94, 94);
+        }
+        .block__title-svg {
+            fill: rgb(97, 94, 94);
+        }
+        .link--text {
+            color: rgb(97, 94, 94);
+        }
+    }
+}
+
+.wrapper--link {
+    width: 100%;
+    height: auto;
+    display: flex;
+    justify-content: flex-start;
+}
+.link--svg {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    
+}
+.block__title-svg {
+    margin-right: 5px;
+    fill: $blue_title;
+    transition: all 0.3s;
+}
+.link--title {
+    font-family: 'robotobold';
+    color: $red_shade;
+    font-size: 18px;
+    transition: all 0.3s;
+}
+.link--text {
+    font-family: 'Roboto';
+    color: $blue;
+    width: 100%;
+    margin-top: 8px;
+    transition: all 0.3s;
+}
+.default__title_news {
+    width: 100%;
+    text-align: center;
+    font-family: 'robotobold';
+    color: $red_shade;
+    font-size: 18px;
+}
