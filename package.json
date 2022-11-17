@@ -33,7 +33,7 @@
     "gulp-wrap": "^0.14.0",
     "imports-loader": "^0.8.0",
     "uglifyjs-webpack-plugin": "^1.2.2",
-    "webpack": "^4.1.1"
+    "webpack": "^4.46.0"
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
